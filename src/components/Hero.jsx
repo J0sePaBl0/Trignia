@@ -21,7 +21,7 @@ export default function Hero({
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(to bottom, rgba(233,245,244,100) 0%, rgba(237,237,237,0.88) 30%, rgba(245,245,245,0.91) 40%, rgba(230,235,232,0.92) 60%, rgba(346,245,244,100) 100%)',
+          background: `linear-gradient(to bottom, rgba(233,245,244,100) 0%, rgba(237,237,237,0.88) 30%, rgba(245,245,245,0.91) 40%, rgba(230,235,232,0.92) 60%, rgba(346,245,244,100) 100%)`,
         }}
         aria-hidden
       />
@@ -31,15 +31,15 @@ export default function Hero({
       {/* Content */}
       <div className="absolute inset-0 flex items-center px-6 py-16">
         <div className="w-full text-center">
-          <h1 className="text-5xl font-extrabold tracking-tight text-emerald-800 sm:text-5xl md:text-7xl">
+          <h1 className="text-5xl tracking-tight sm:text-5xl md:text-8xl title-font text-(--color-titles-color)">
             LA NUEVA ERA
           </h1>
 
-          <p className="mt-2 text-2xl font-medium tracking-tight text-emerald-700 sm:text-3xl md:text-4xl">
+          <h2 className="mt-2 text-2xl font-medium tracking-tight sm:text-3xl md:text-6xl primary-color">
             de la Gestión CLÍNICA
-          </p>
+          </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-base font-semibold leading-relaxed text-gray-600 sm:text-lg">
+          <p className="mx-auto mt-6 max-w-2xl text-font-strong text-(--color-text-color) sm:text-lg md:text-xl">
             Combinamos automatización, inteligencia artificial <br className="hidden sm:block" />
             y analítica para clínicas y centros de bienestar que{" "}
             <span className="font-extrabold">buscan liderar</span> la transformación digital
@@ -48,16 +48,16 @@ export default function Hero({
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <button
               onClick={onPrimaryClick}
-              className="rounded-full bg-emerald-700 px-10 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-emerald-800 active:scale-[0.99]"
+              className="rounded-full bg-(--color-primary-color) px-10 py-3 text-sm font-bold text-white shadow-sm transition hover:brightness-90 active:scale-[0.99]"
             >
-              Agendar
+              Agendar una reunión
             </button>
 
             <button
               onClick={onSecondaryClick}
-              className="rounded-full bg-emerald-700 px-10 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-emerald-800 active:scale-[0.99]"
+              className="rounded-full bg-blend-color px-10 py-3 text-sm font-bold text-(--color-titles-color) border-(--color-primary-color) border-2 shadow-sm transition hover:brightness-90 active:scale-[0.99]"
             >
-              Agendar
+              Conocer más
             </button>
           </div>
         </div>

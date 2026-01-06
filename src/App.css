@@ -1,11 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,700;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,700;1,700&family=Lunasima:wght@400;700&display=swap');
 @import "tailwindcss";
+
+:root {
+  --color-titles-color: #0E6B5A;
+  --color-white-variant: #E9F5F4;
+  --color-text-color: #555353;
+  --color-primary-color: #418C7E;
+  --color-secondary-color: #45AD7F;
+  --color-light-primary: #78BFB9;
+  --color-white-primary: #A2D4CA;
+  --font-title: 'Asap', system-ui, -apple-system;
+  --font-text: 'Ludisima', system-ui, -apple-system;
+}
+
+.title-font {
+  font-family: var(--font-title);
+  font-weight: 700;
+}
+
+.text-font-light {
+  font-family: var(--font-text);
+}
+.text-font-strong {
+  font-family: var(--font-text);
+  font-weight: 700;
+}
+
+.primary-color {
+  color: var(--color-primary-color);
+}
+
 
 #root {
   margin: 0 auto;
   text-align: center;
 }
+
 
 @keyframes logo-spin {
   from {

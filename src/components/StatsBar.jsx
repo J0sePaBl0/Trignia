@@ -2,7 +2,7 @@ import React from "react";
 
 export default function StatsBar({ stats }) {
   return (
-    <div className="mt-10 overflow-hidden rounded-2xl bg-emerald-700">
+    <div className="mt-10 overflow-hidden rounded-2xl bg-primary">
       <div className="grid gap-0 md:grid-cols-4">
         {stats.map((s, idx) => (
           <div
