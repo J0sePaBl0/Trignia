@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,700;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,700;1,700&family=Lunasima:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,700;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lunasima:wght@400;700&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -12,6 +13,12 @@
   --color-white-primary: #A2D4CA;
   --font-title: 'Asap', system-ui, -apple-system;
   --font-text: 'Ludisima', system-ui, -apple-system;
+  --font-subtitle: 'Inter', system-ui, -apple-system;
+}
+.subtitle-styles {
+  font-family: var(--font-subtitle);
+  font-weight: 700;
+  color: var(--color-titles-color);
 }
 
 .title-font {
@@ -21,6 +28,7 @@
 
 .text-font-light {
   font-family: var(--font-text);
+  font-weight: 300;
 }
 .text-font-strong {
   font-family: var(--font-text);

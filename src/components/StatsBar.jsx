@@ -2,7 +2,11 @@ import React from "react";
 
 export default function StatsBar({ stats }) {
   return (
-    <div className="mt-10 overflow-hidden rounded-2xl bg-primary">
+    <div className="mt-10 overflow-hidden rounded-2xl"
+    style={{
+        background:
+          "linear-gradient(to bottom, rgba(162,212,202,100) 0%, rgba(65,140,126,0.88) 50%, rgba(65,140,126,0.88) 50%",
+      }}>
       <div className="grid gap-0 md:grid-cols-4">
         {stats.map((s, idx) => (
           <div

@@ -8,8 +8,11 @@ function App() {
     <div>
       <Hero
         videoSrc="/videos/hero.mp4"
-        onPrimaryClick={() => console.log("Primary CTA")}
-        onSecondaryClick={() => console.log("Secondary CTA")}
+        onSecondaryClick={() => {
+          const el = document.getElementById('problems');
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }}
+        onPrimaryClick={() => console.log("Secondary CTA")}
       />
       <ProblemsSection />
     </div>
