@@ -1,11 +1,11 @@
-#root {
-  margin: 0 auto;
-  text-align: center;
-}
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,700;1,700&display=swap');
 
 @import "tailwindcss";
 
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
 
 @keyframes logo-spin {
   from {
