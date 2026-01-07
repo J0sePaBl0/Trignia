@@ -20,7 +20,7 @@ export default function WhySection() {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           {/* Left illustration */}
           <div className="w-full md:w-1/2 flex justify-center md:justify-start">
-            <img src="/bot.svg" alt="Ilustración Trignia" className="w-xs md:w-full max-w-sm md:max-w-md h-auto object-contain" />
+            <img src="/images/bot.svg" alt="Ilustración Trignia" className="w-xs md:w-full max-w-sm md:max-w-md h-auto object-contain" />
           </div>
 
           {/* Right content */}
