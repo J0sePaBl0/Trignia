@@ -18,10 +18,10 @@ export default function ProblemCard({ icon, title, desc, highlight }) {
           {title}
         </h3>
 
-        <p className="mt-4 mb-4 text-[14px] leading-relaxed text-font-light ">{desc}</p>
+        <p className="mt-4 mb-13 md:mb-5 text-[14px] leading-relaxed text-font-light ">{desc}</p>
       </div>
 
-      <div className="bg-(--color-primary-color) px-5 py-5 h-1/3 ">
+      <div className="bg-(--color-primary-color) px-5 py-5 md:mt-2 h-1/3">
         <p className="text-[13px] font-semibold leading-relaxed text-white">{highlight}</p>
       </div>
     </div>
