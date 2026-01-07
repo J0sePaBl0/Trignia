@@ -51,7 +51,7 @@ export default function ProblemsSection() {
     id="problems"
     style={{
         background:
-          "linear-gradient(to bottom, rgba(346,245,244,100) 0%, rgba(237,237,237,0.88) 30%, rgba(245,245,245,0.91) 40%, rgba(230,235,232,0.92) 60%, rgba(233,245,244,1) 100%)",
+          "linear-gradient(to bottom, rgba(346,245,244,100) 0%, rgba(237,237,237,0.88) 30%, rgba(245,245,245,0.91) 40%, rgba(230,235,232,0.92) 60%, rgba(255,255,255,1) 100%)",
       }}>
       <div className="mx-auto max-w-6xl px-6 py-14">
         {/* Title */}
@@ -73,6 +73,9 @@ export default function ProblemsSection() {
         </div>
 
         {/* Stats bar */}
+         <h2 className="text-2xl mb-10 mt-20 subtitle-styles text-start">
+          Los resultados hablan por sí solos
+        </h2>
         <StatsBar stats={stats} />
       </div>
     </section>

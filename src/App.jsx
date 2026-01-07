@@ -1,6 +1,8 @@
 import React from 'react'
 import Hero from './components/Hero'
 import ProblemsSection from './components/ProblemsSolve'
+import Steps from './components/Steps'
+import WhySection from './components/WhySection'
 
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
         onPrimaryClick={() => console.log("Secondary CTA")}
       />
       <ProblemsSection />
+      <Steps />
+      <WhySection />
     </div>
   )
 }
