@@ -20,7 +20,7 @@ export default function Steps() {
             100% { transform: translateY(0); }
           }
           .btn-modern {
-            background-image: linear-gradient(90deg, #16a34a 0%, #059669 50%, #065f46 100%);
+           
             background-size: 200% 100%;
             animation: bgMove 2s linear infinite, floatY 2s ease-in-out infinite, ease-in-out infinite;
             will-change: transform, box-shadow, background-position;
@@ -45,7 +45,7 @@ export default function Steps() {
             }
             window.location.href = 'mailto:hola@trignia.com?subject=Consultoría%20gratuita'
           }}
-          className="mt-6 inline-flex items-center gap-3 text-white font-semibold text-sm md:text-base px-6 py-3 rounded-full shadow-lg transform transition duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-200 focus-visible:ring-offset-2 btn-modern"
+          className="mt-6 inline-flex items-center gap-3 text-white font-semibold text-sm md:text-base px-6 py-3 rounded-full shadow-lg transform transition duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-200 focus-visible:ring-offset-2 bg-linear-to-r from-emerald-600 to-emerald-700 btn-modern"
         >
           <span>Agenda tu consultoría GRATUITA</span>
           <svg className="w-4 h-4" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
