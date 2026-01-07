@@ -16,8 +16,8 @@ export default function StatsBar({ stats }) {
               idx !== 0 ? "md:border-l md:border-white/15" : "",
             ].join(" ")}
           >
-            <div className="text-4xl font-extrabold tracking-tight">{s.value}</div>
-            <div className="mt-2 text-xs font-semibold text-white/90">{s.label}</div>
+            <div className="text-5xl font-extrabold tracking-tight">{s.value}</div>
+            <div className="mt-2 text-s font-semibold text-white/90">{s.label}</div>
           </div>
         ))}
       </div>
