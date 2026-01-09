@@ -1,7 +1,7 @@
 import React from "react";
 // Use SVGs from public/icons (served at /icons/...)
-import ProblemCard from "./ProblemCard";
-import StatsBar from "./StatsBar";
+import ProblemCard from "../ProblemCard";
+import StatsBar from "../StatsBar";
 
 const cards = [
   {

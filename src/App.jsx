@@ -1,8 +1,9 @@
 import React from 'react'
-import Hero from './components/Hero'
-import ProblemsSection from './components/ProblemsSolve'
-import Steps from './components/Steps'
-import WhySection from './components/WhySection'
+import Hero from './components/sections/Hero'
+import ProblemsSection from './components/sections/ProblemsSolve'
+import Steps from './components/sections/Steps'
+import WhySection from './components/sections/WhySection'
+import Testimonials from './components/sections/Testimonials'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <ProblemsSection />
       <Steps />
       <WhySection />
+      <Testimonials />
     </div>
   )
 }
