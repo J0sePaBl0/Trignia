@@ -4,6 +4,7 @@ import ProblemsSection from './components/sections/ProblemsSolve'
 import Steps from './components/sections/Steps'
 import WhySection from './components/sections/WhySection'
 import Testimonials from './components/sections/Testimonials'
+import ContactForm from './components/ContactForm'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Steps />
       <WhySection />
       <Testimonials />
+      <ContactForm />
     </div>
   )
 }

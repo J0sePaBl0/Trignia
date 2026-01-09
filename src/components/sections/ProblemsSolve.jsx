@@ -47,13 +47,13 @@ const stats = [
 
 export default function ProblemsSection() {
   return (
-    <section className="w-full bg-[#f3fbf8] border-3"
+    <section className="w-full bg-[#f3fbf8]"
     id="problems"
     style={{
         background:
           "linear-gradient(to bottom, rgba(346,245,244,100) 0%, rgba(237,237,237,0.88) 30%, rgba(245,245,245,0.91) 40%, rgba(230,235,232,0.92) 60%, rgba(255,255,255,1) 100%)",
       }}>
-      <div className="mx-auto max-w-7xl px-6 py-14 border-3">
+      <div className="mx-auto max-w-7xl px-6 py-14">
         {/* Title */}
         <h2 className="text-2xl mb-20 subtitle-styles">
           ¿Que resuelve Trignia?
