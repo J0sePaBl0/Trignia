@@ -69,36 +69,36 @@ export default function Steps() {
           <div className="grid grid-cols-2 gap-12 text-left">
             <div className="pr-8">
               <div className="text-4xl font-extrabold flex row subtitles2-styles">1
-                <h3 className="ml-5 mt-2 text-xl font-semibold">Diagnóstico</h3>
+                <h3 className="ml-5 mt-2 text-3xl font-semibold">Diagnóstico</h3>
               </div>
-              <p className="mt-3 text-gray-600 text-wrap flex max-w-sm">
+              <p className="mt-3 text-gray-600 text-wrap flex max-w-sm text-lg ">
                 Analizamos cómo funciona tu clínica hoy: agenda, comunicación, procesos y puntos de fricción.
               </p>
             </div>
 
             <div className="pl-8 text-right flex-col justify-end">
               <div className="text-4xl font-extrabold subtitles2-styles flex row justify-end ">2
-                <h3 className="mt-2 text-xl font-semibold ml-5">Diseño</h3>
+                <h3 className="mt-2 text-3xl font-semibold ml-5">Diseño</h3>
               </div>
-              <p className="mt-3 text-gray-600 text-wrap flex max-w-sm ml-auto">
+              <p className="mt-3 text-gray-600 text-wrap flex max-w-sm ml-auto text-lg">
                 Definimos flujos, automatizaciones y comportamientos de IA adaptados a tus necesidades específicas.
               </p>
             </div>
 
             <div className="pr-8 text-left pt-15 md:pt-12">
               <div className="text-4xl font-extrabold subtitles2-styles flex">3
-                <h3 className="mt-2 text-xl font-semibold  ml-5">Implementación</h3>
+                <h3 className="mt-2 text-3xl font-semibold  ml-5">Implementación</h3>
               </div>
-              <p className="mt-3 text-gray-600 text-wrap flex max-w-sm">
+              <p className="mt-3 text-gray-600 text-wrap flex max-w-sm text-lg">
                 Construimos e integramos la solución con tus herramientas actuales (Siku, agenda, WhatsApp, correo, etc.).
               </p>
             </div>
 
             <div className="pl-8 text-right pt-15 md:pt-12">
               <div className="text-4xl font-extrabold subtitles2-styles flex justify-end ">4
-                <h3 className="mt-2 text-xl font-semibold text-emerald-700 ml-5">Optimización</h3>
+                <h3 className="mt-2 text-3xl font-semibold text-emerald-700 ml-5">Optimización</h3>
               </div>
-              <p className="mt-3 text-gray-600 text-wrap flex max-w-sm ml-auto">
+              <p className="mt-3 text-gray-600 text-wrap flex max-w-sm ml-auto text-lg">
                 Ponemos todo en marcha, medimos resultados y optimizamos continuamente según datos reales.
               </p>
             </div>

@@ -51,9 +51,9 @@ export default function Testimonials() {
   return (
     <section className="relative bg-white overflow-hidden">
       {/* Bottom gradient (like the screenshot) */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-emerald-700/35 via-emerald-500/10 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-emerald-700/35 via-emerald-500/10 to-transparent" />
 
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-24">
+      <div className="relative mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 py-24">
         <h2 className="text-center text-3xl md:text-4xl font-semibold text-emerald-600">
           Lo que nuestros clientes dicen
         </h2>

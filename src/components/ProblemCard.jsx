@@ -14,15 +14,15 @@ export default function ProblemCard({ icon, title, desc, highlight }) {
           )}
         </div>
 
-        <h3 className="mt-5 whitespace-pre-line text-center text-m font-semibold text-emerald-700">
+        <h3 className="mt-5 whitespace-pre-line text-center text-xl font-semibold text-emerald-700">
           {title}
         </h3>
 
-        <p className="mt-4 mb-13 md:mb-5 text-[14px] leading-relaxed text-font-light ">{desc}</p>
+        <p className="mt-4 mb-13 md:mb-5 text-[16px] leading-relaxed text-font-light ">{desc}</p>
       </div>
 
       <div className="bg-(--color-primary-color) px-5 py-5 md:mt-2 h-1/3">
-        <p className="text-[13px] font-semibold leading-relaxed text-white">{highlight}</p>
+        <p className="text-[17px] font-semibold leading-relaxed text-white">{highlight}</p>
       </div>
     </div>
   );
