@@ -32,6 +32,20 @@ export default function Testimonials() {
       text:
         "Texto de testimonio. Menciona tranquilidad operativa: “ahora todo fluye y el equipo se enfoca en pacientes”.",
     },
+    {
+      id: 5,
+      clinicName: "Nombre de la clínica",
+      rating: 5,
+      text:
+        "Texto de testimonio. Menciona tranquilidad operativa: “ahora todo fluye y el equipo se enfoca en pacientes”.",
+    },
+    {
+      id: 6,
+      clinicName: "Nombre de la clínica",
+      rating: 5,
+      text:
+        "Texto de testimonio. Menciona tranquilidad operativa: “ahora todo fluye y el equipo se enfoca en pacientes”.",
+    },
   ];
 
   return (
