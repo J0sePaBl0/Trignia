@@ -14,7 +14,7 @@ export default function WhySection() {
     <section className="md:py-16 py-8 "
     style={{
         background:
-          "linear-gradient(to bottom, rgba(233,245,244,1) 0%, rgba(237,237,237,0.88) 30%, rgba(245,245,245,0.91) 40%, rgba(230,235,232,0.92) 60%, rgba(233,245,244,1) 100%)",
+          "linear-gradient(to bottom, rgba(233,245,244,1) 0%, rgba(237,237,237,0.88) 30%, rgba(245,245,245,0.91) 40%, rgba(230,235,232,0.92) 60%, rgba(255,255,255,1) 100%)",
       }}>
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
