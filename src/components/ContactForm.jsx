@@ -63,19 +63,36 @@ export default function ContactForm({
   };
 
   return (
-    <section className="relative overflow-hidden bg-white">
+     <section className="relative overflow-hidden">
+  {/* Flipped background image */}
+  <div
+    className="
+      absolute inset-0
+      -scale-x-100
+      bg-no-repeat
+      bg-right
+      bg-fixed
+    "
+    style={{
+      backgroundImage: "url('/images/formImage.jpeg')",
+    }}
+  />
+      <div className="w-full h-full relative"
+      style={{
+          background: `linear-gradient(to left, rgba(233,245,244,100) 0%, rgba(237,237,237,0.90) 30%, rgba(245,245,245,0.98) 40%, rgba(230,235,232,0.95) 60%, rgba(346,245,244,0.80) 100%)`,
+        }}>
       {/* Subtle background blobs (match page colors) */}
-      <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-emerald-200/40 blur-3xl" />
+      <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full  blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-emerald-300/20 blur-3xl" />
 
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+      <div className="relative mx-auto max-w-full px-4 sm:px-6 lg:px-8 py-16 justify-center flex">
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-center w-7xl">
           {/* Left copy */}
-          <div>
+          <div className="flex-col text-start">
             <h2 className="text-3xl md:text-4xl font-semibold text-emerald-600">
               Contáctanos
             </h2>
-            <p className="mt-4 text-slate-600 leading-relaxed">
+            <p className="mt-4 leading-relaxed max-w-lg text-font-strong text-(--color-text-color) sm:text-lg md:text-xl">
               Cuéntanos sobre tu clínica y lo que necesitas. Te responderemos lo
               antes posible para ayudarte a encontrar la mejor solución.
             </p>
@@ -196,6 +213,7 @@ export default function ContactForm({
           </div>
         </div>
       </div>
+      </div>
     </section>
   );
 }
@@ -213,7 +231,7 @@ function Field({
     <div className="space-y-2">
       <label
         htmlFor={id}
-        className="text-sm font-medium text-slate-700"
+        className="text-sm font-medium text-(--color-primary-color) justify-baseline flex"
       >
         {label}
       </label>
