@@ -61,13 +61,14 @@ export default function ProblemsSection() {
 
         {/* Cards */}
         <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {cards.map((c) => (
+          {cards.map((c, i) => (
             <ProblemCard
               key={c.title}
               icon={c.icon}
               title={c.title}
               desc={c.desc}
               highlight={c.highlight}
+              index={i}
             />
           ))}
         </div>
