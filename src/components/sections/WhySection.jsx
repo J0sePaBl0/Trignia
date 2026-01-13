@@ -11,7 +11,7 @@ export default function WhySection() {
   }
 
   return (
-    <section className="md:py-16 py-8 "
+    <section id='whysection' className="md:py-16 py-8 "
     style={{
         background:
           "linear-gradient(to bottom, rgba(233,245,244,1) 0%, rgba(237,237,237,0.88) 30%, rgba(245,245,245,0.91) 40%, rgba(230,235,232,0.92) 60%, rgba(255,255,255,1) 100%)",

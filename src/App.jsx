@@ -5,6 +5,7 @@ import Steps from './components/sections/Steps'
 import WhySection from './components/sections/WhySection'
 import Testimonials from './components/sections/Testimonials'
 import ContactForm from './components/ContactForm'
+import Navbar from './layouts/Nabvar'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         }}
         onPrimaryClick={() => console.log("Secondary CTA")}
       />
+      <Navbar />
       <ProblemsSection />
       <Steps />
       <WhySection />

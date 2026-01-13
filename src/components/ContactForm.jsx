@@ -63,7 +63,7 @@ export default function ContactForm({
   };
 
   return (
-     <section className="relative overflow-hidden">
+     <section id="contact" className="relative overflow-hidden">
   {/* Flipped background image */}
   <div
     className="

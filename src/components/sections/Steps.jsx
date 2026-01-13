@@ -53,8 +53,8 @@ export default function Steps() {
           </svg>
         </button>
       </div>
-      <div className="max-w-6xl mx-auto px-6 pb-5">
-        <h2 className="text-2xl font-bold subtitle-styles mb-12">Como funciona</h2>
+      <div  className="max-w-6xl mx-auto px-6 pb-5">
+        <h2 id="steps"  className="text-2xl font-bold subtitle-styles mb-12">Como funciona</h2>
 
         <div className="relative">
           {/* cross lines */}
