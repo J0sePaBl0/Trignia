@@ -55,22 +55,76 @@
   text-align: center;
 }
 
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes heroPulse {
+  0% {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: scale(1.045);
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  100% {
+    transform: scale(1);
   }
 }
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.btn-modern {
+  background-image: linear-gradient(
+    90deg,
+    #16a34a 0%,
+    #059669 50%,
+    #065f46 100%
+  );
+  background-size: 200% 100%;
+  animation:
+    bgMove 2s linear infinite,
+    floatY 2s ease-in-out infinite;
+  will-change: transform, box-shadow, background-position;
+}
+
+.btn-modern:hover {
+  animation-play-state: paused, paused;
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 30px 60px rgba(5,150,105,0.18);
+}
+
+.btn-modern:active {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.btn-hero {
+  background-image: linear-gradient(
+    90deg,
+    #16a34a 0%,
+    #059669 50%,
+    #065f46 100%
+  );
+  background-size: 200% 100%;
+  animation:
+    bgMove 2s linear infinite,
+    heroPulse 2s ease-in-out infinite;
+  will-change: transform, box-shadow, background-position;
+}
+
+.btn-hero:hover {
+  animation-play-state: paused, paused;
+  transform: scale(1.03);
+  box-shadow: 0 30px 60px rgba(5,150,105,0.18);
+}
+
+.btn-hero:active {
+  transform: translateY(-4px) scale(1.02);
+}
 .card {
   padding: 2em;
 }
