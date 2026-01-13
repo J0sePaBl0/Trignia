@@ -59,17 +59,17 @@ export default function Steps() {
         <div className="relative">
           {/* cross lines */}
           <div className="absolute inset-0 flex items-center" aria-hidden>
-            <div className="w-full h-0.5 bg-(--color-secondary-color)" />
+            <div className="hidden md:block w-full h-0.5 bg-(--color-secondary-color)" />
           </div>
           <div className="absolute inset-0 flex justify-center" aria-hidden>
-            <div className="h-full w-0.5 bg-(--color-secondary-color)" />
+            <div className="hidden md:block h-full w-0.5 bg-(--color-secondary-color)" />
           </div>
 
           {/* grid */}
-          <div className="grid grid-cols-2 gap-12 text-left">
+          <div className="grid md:grid-cols-2 gap-12 text-left grid-cols-1">
             <div className="pr-8">
-              <div className="text-4xl font-extrabold flex row subtitles2-styles">1
-                <h3 className="ml-5 mt-2 text-3xl font-semibold">Diagnóstico</h3>
+              <div className="text-4xl font-extrabold subtitles2-styles">1
+                <h3 className="ml-5 mt-2 md:text-3xl text-2xl font-semibold">Diagnóstico</h3>
               </div>
               <p className="mt-3 text-gray-600 text-wrap flex max-w-sm text-lg ">
                 Analizamos cómo funciona tu clínica hoy: agenda, comunicación, procesos y puntos de fricción.
@@ -78,7 +78,7 @@ export default function Steps() {
 
             <div className="pl-8 text-right flex-col justify-end">
               <div className="text-4xl font-extrabold subtitles2-styles flex row justify-end ">2
-                <h3 className="mt-2 text-3xl font-semibold ml-5">Diseño</h3>
+                <h3 className="mt-2 md:text-3xl text-2xl font-semibold ml-5">Diseño</h3>
               </div>
               <p className="mt-3 text-gray-600 text-wrap flex max-w-sm ml-auto text-lg">
                 Definimos flujos, automatizaciones y comportamientos de IA adaptados a tus necesidades específicas.
@@ -87,7 +87,7 @@ export default function Steps() {
 
             <div className="pr-8 text-left pt-15 md:pt-12">
               <div className="text-4xl font-extrabold subtitles2-styles flex">3
-                <h3 className="mt-2 text-3xl font-semibold  ml-5">Implementación</h3>
+                <h3 className="mt-2 md:text-3xl text-2xl font-semibold ml-5 mr-3">Implementación</h3>
               </div>
               <p className="mt-3 text-gray-600 text-wrap flex max-w-sm text-lg">
                 Construimos e integramos la solución con tus herramientas actuales (Siku, agenda, WhatsApp, correo, etc.).
@@ -96,7 +96,7 @@ export default function Steps() {
 
             <div className="pl-8 text-right pt-15 md:pt-12">
               <div className="text-4xl font-extrabold subtitles2-styles flex justify-end ">4
-                <h3 className="mt-2 text-3xl font-semibold text-emerald-700 ml-5">Optimización</h3>
+                <h3 className="mt-2 md:text-3xl text-2xl font-semibold text-emerald-700 ml-5">Optimización</h3>
               </div>
               <p className="mt-3 text-gray-600 text-wrap flex max-w-sm ml-auto text-lg">
                 Ponemos todo en marcha, medimos resultados y optimizamos continuamente según datos reales.
@@ -105,7 +105,7 @@ export default function Steps() {
           </div>
 
           {/* center circle */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+          <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
             <div className="w-25 h-25 md:w-36 md:h-36 rounded-full bg-white border-4 border-emerald-200 shadow-md flex items-center justify-center">
               <img src="/icons/conexion.gif" alt="icon" className="h-15 w-15 md:h-25 md:w-25 object-contain" />
             </div>

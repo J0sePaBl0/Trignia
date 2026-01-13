@@ -60,7 +60,7 @@ export default function ProblemsSection() {
         </h2>
 
         {/* Cards */}
-        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4 ">
           {cards.map((c, i) => (
             <ProblemCard
               key={c.title}

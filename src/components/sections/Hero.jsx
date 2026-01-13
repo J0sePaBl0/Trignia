@@ -7,7 +7,7 @@ export default function Hero({
   onSecondaryClick,
 }) {
   return (
-    <section id="top" className="relative h-screen w-full overflow-hidden">
+    <section id="top" className="relative md:h-screen w-full overflow-hidden h-200">
       {/* Video background */}
       <video
         className="absolute inset-0 h-full w-full object-cover"
@@ -52,7 +52,7 @@ export default function Hero({
             de la Gestión CLÍNICA
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-font-strong text-(--color-text-color) sm:text-lg md:text-xl">
+          <p className="mx-auto mt-6 max-w-2xl text-font-strong text-(--color-text-color) text-sm md:text-xl">
             Combinamos automatización, inteligencia artificial <br className="hidden sm:block" />
             y analítica para clínicas y centros de bienestar que{" "}
             <span className="font-extrabold">buscan liderar</span> la transformación digital

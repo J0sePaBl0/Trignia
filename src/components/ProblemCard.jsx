@@ -7,7 +7,7 @@ export default function ProblemCard({ icon, title, desc, highlight, index = 0 })
 
   return (
     <motion.div
-      className="rounded-2xl bg-white/90 ring-1 ring-black/5 overflow-hidden backdrop-blur-[2px] pb-10"
+      className="rounded-2xl bg-white/90 ring-1 ring-black/5 overflow-hidden backdrop-blur-[2px] pb-10  md:w-full"
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.35 }}
