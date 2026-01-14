@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 446 428.33">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: url(#Degradado_sin_nombre_88-6);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
+        stroke-miterlimit: 10;
+        stroke-width: 22px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-6, .cls-7, .cls-8 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: url(#Degradado_sin_nombre_88-3);
+      }
+
+      .cls-3 {
+        stroke: url(#Degradado_sin_nombre_88);
+      }
+
+      .cls-4 {
+        stroke: url(#Degradado_sin_nombre_88-4);
+      }
+
+      .cls-5 {
+        fill: #fff;
+        stroke: #009f82;
+      }
+
+      .cls-6 {
+        stroke: url(#Degradado_sin_nombre_125);
+      }
+
+      .cls-7 {
+        stroke: url(#Degradado_sin_nombre_88-2);
+      }
+
+      .cls-8 {
+        stroke: url(#Degradado_sin_nombre_88-5);
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_125" data-name="Degradado sin nombre 125" x1="168.82" y1="282.07" x2="271.25" y2="282.07" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#004437"/>
+      <stop offset=".99" stop-color="#01ab90"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_88" data-name="Degradado sin nombre 88" x1="118.89" y1="160.01" x2="186.47" y2="160.01" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#01ab90"/>
+      <stop offset="1" stop-color="#004437"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_88-2" data-name="Degradado sin nombre 88" x1="254.73" y1="161.09" x2="327.11" y2="161.09" xlink:href="#Degradado_sin_nombre_88"/>
+    <linearGradient id="Degradado_sin_nombre_88-3" data-name="Degradado sin nombre 88" x1="164.29" y1="113.5" x2="277.08" y2="113.5" xlink:href="#Degradado_sin_nombre_88"/>
+    <linearGradient id="Degradado_sin_nombre_88-4" data-name="Degradado sin nombre 88" x1="73.5" y1="257.1" x2="186.29" y2="257.1" xlink:href="#Degradado_sin_nombre_88"/>
+    <linearGradient id="Degradado_sin_nombre_88-5" data-name="Degradado sin nombre 88" x1="260.9" y1="257.1" x2="373.69" y2="257.1" xlink:href="#Degradado_sin_nombre_88"/>
+    <linearGradient id="Degradado_sin_nombre_88-6" data-name="Degradado sin nombre 88" x1="31.91" y1="213.74" x2="414.09" y2="213.74" xlink:href="#Degradado_sin_nombre_88"/>
+  </defs>
+  <line class="cls-5" x1="223" y1="158.89" x2="223" y2="286.32"/>
+  <polyline class="cls-6" points="173.71 268.95 221.52 292.68 266.08 268.95"/>
+  <polyline class="cls-3" points="179.01 113.5 129.89 158.89 129.89 214.6"/>
+  <polyline class="cls-7" points="261.5 116.26 316.11 158.89 316.11 214.6"/>
+  <circle class="cls-2" cx="220.68" cy="113.5" r="45.4"/>
+  <circle class="cls-4" cx="129.89" cy="257.1" r="45.4"/>
+  <circle class="cls-8" cx="317.3" cy="257.1" r="45.4"/>
+  <line class="cls-5" x1="223" y1="266.23" x2="223" y2="390.14"/>
+  <circle class="cls-1" cx="223" cy="213.74" r="180.09"/>
+</svg>

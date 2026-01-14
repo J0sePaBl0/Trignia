@@ -80,16 +80,7 @@ export default function Navbar() {
             className="flex items-center gap-2 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-200 rounded-full"
             aria-label="Ir al inicio"
           >
-            <div className="h-9 w-9 rounded-full bg-emerald-600/10 flex items-center justify-center">
-              <span className="text-emerald-700 font-bold">T</span>
-            </div>
-
-            <span
-              className="text-base sm:text-lg font-extrabold"
-              style={{ color: "var(--color-titles-color)" }}
-            >
-              Trignia
-            </span>
+            <img src="images/trignia_logo3.webp" alt="Trignia Logo" className="w-30 h-15" />
           </button>
 
           {/* Links (desktop) */}
