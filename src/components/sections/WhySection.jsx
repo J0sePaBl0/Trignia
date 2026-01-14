@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 export default function WhySection() {
   const handleCTAClick = () => {
@@ -19,12 +20,19 @@ export default function WhySection() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           {/* Left illustration */}
-          <div className="w-full md:w-1/2 flex justify-center md:justify-start">
+          <motion.div className="w-full md:w-1/2 flex justify-center md:justify-start"
+            initial = {{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}>
             <img src="/images/bot.svg" alt="Ilustración Trignia" className="w-xs md:w-full max-w-sm md:max-w-md h-auto object-contain" />
-          </div>
+          </motion.div>
 
           {/* Right content */}
-          <div className="w-full md:w-1/2 flex-col text-left md:justify-baseline justify-center">
+          <motion.div className="w-full md:w-1/2 flex-col text-left md:justify-baseline justify-center"
+            initial = {{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <h2 className="text-2xl md:text-3xl subtitle-styles text-gray-800 mb-4">¿Por qué Trignia?</h2>
             <p className="text-gray-600 mb-4 text-xl text-font">
              Entendemos que cada clínica es diferente, por eso creamos soluciones totalmente personalizadas.
@@ -78,7 +86,7 @@ En Trignia analizamos tu operación, diseñamos flujos inteligentes y te acompa�
             <path d="M6 4l8 6-8 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
