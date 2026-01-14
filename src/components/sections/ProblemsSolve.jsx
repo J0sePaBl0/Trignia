@@ -1,7 +1,8 @@
-import React from "react";
+import { React, useRef }from "react";
 // Use SVGs from public/icons (served at /icons/...)
 import ProblemCard from "../ProblemCard";
 import StatsBar from "../StatsBar";
+import { motion, useScroll } from "framer-motion";
 
 const cards = [
   {
@@ -46,6 +47,7 @@ const stats = [
 ];
 
 export default function ProblemsSection() {
+  
   return (
     <section className="w-full bg-[#f3fbf8]"
     id="problems"
@@ -53,11 +55,14 @@ export default function ProblemsSection() {
         background:
           "linear-gradient(to bottom, rgba(346,245,244,100) 0%, rgba(237,237,237,0.88) 30%, rgba(245,245,245,0.91) 40%, rgba(230,235,232,0.92) 60%, rgba(255,255,255,1) 100%)",
       }}>
-      <div className="mx-auto max-w-7xl px-6 py-14">
+      <div className="mx-auto max-w-7xl px-6 py-14 ">
         {/* Title */}
-        <h2 className="text-2xl mb-20 subtitle-styles">
+        <motion.h2 className="text-2xl mb-20 subtitle-styles"
+        initial = {{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5}}>
           ¿Que resuelve Trignia?
-        </h2>
+        </motion.h2>
 
         {/* Cards */}
         <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4 ">
@@ -74,9 +79,12 @@ export default function ProblemsSection() {
         </div>
 
         {/* Stats bar */}
-         <h2 className="text-2xl mb-10 mt-20 subtitle-styles text-start">
+         <motion.h2 className="text-2xl mb-10 mt-40 subtitle-styles text-start"
+            initial = {{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5}}>
           Los resultados hablan por sí solos
-        </h2>
+        </motion.h2>
         <StatsBar stats={stats} />
       </div>
     </section>

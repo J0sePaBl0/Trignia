@@ -11,6 +11,7 @@ import Navbar from './layouts/Nabvar'
 function App() {
   return (
     <div>
+      <Navbar />
       <Hero
         videoSrc="/videos/hero.mp4"
         onSecondaryClick={() => {
@@ -19,10 +20,11 @@ function App() {
         }}
         onPrimaryClick={() => console.log("Secondary CTA")}
       />
-      <Navbar />
-      <ProblemsSection />
+      
+      
+     <ProblemsSection />
       <Steps />
-      <WhySection />
+       <WhySection />
       <Testimonials />
       <ContactForm />
     </div>

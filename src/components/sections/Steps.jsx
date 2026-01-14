@@ -3,11 +3,11 @@ import { motion } from 'framer-motion'
 
 export default function Steps() {
   return (
-    <section className="h-full py-20 bg-linear-to-b  from-emerald-50 to-white"style={{
+    <section className="w-full mt-20 "style={{
         background:
           "linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(237,237,237,0.88) 30%, rgba(245,245,245,0.91) 40%, rgba(230,235,232,0.92) 60%, rgba(233,245,244,1) 100%)",
       }}>
-        <div className="mt-10 mb-50 text-center title-font text-3xl md:text-4xl font-bold subtitle-styles">
+        <div className="mb-50 text-center title-font text-3xl md:text-4xl font-bold subtitle-styles">
         <motion.h1 
         initial = {{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
