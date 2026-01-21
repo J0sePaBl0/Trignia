@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     const payload = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
 
     // Validación mínima (ejemplo)
-    if (!payload?.correo || !payload?.nombre) {
+    if (!payload?.email || !payload?.name) {
       return res.status(400).json({ ok: false, error: "Missing required fields" });
     }
 
