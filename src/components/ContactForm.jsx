@@ -1,37 +1,38 @@
 // src/components/ContactForm.jsx
 import React, { useId, useState } from "react";
+import { sendLead } from "../services/leads";
 
 export default function ContactForm({
-  onSubmit,
   scheduleHref = "#",
   accentHex = "#10b981", // emerald vibe
 }) {
   const formId = useId();
   const [status, setStatus] = useState({ type: "idle", msg: "" });
   const [values, setValues] = useState({
-    nombre: "",
-    clinica: "",
-    correo: "",
-    telefono: "",
-    asunto: "",
+    name: "",
+    clinic: "",
+    email: "",
+    number: "",
+    subject: "",
   });
 
   const update = (key) => (e) =>
     setValues((v) => ({ ...v, [key]: e.target.value }));
 
   const validate = () => {
-    if (!values.nombre.trim()) return "Por favor ingresa tu nombre.";
-    if (!values.clinica.trim()) return "Por favor ingresa el nombre de tu clínica.";
-    if (!values.correo.trim()) return "Por favor ingresa tu correo.";
+    if (!values.name.trim()) return "Por favor ingresa tu nombre.";
+    if (!values.clinic.trim()) return "Por favor ingresa el nombre de tu clínica.";
+    if (!values.email.trim()) return "Por favor ingresa tu correo.";
     // simple email check
-    if (!/^\S+@\S+\.\S+$/.test(values.correo)) return "Por favor ingresa un correo válido.";
-    if (!values.telefono.trim()) return "Por favor ingresa tu número telefónico.";
-    if (!values.asunto.trim()) return "Por favor ingresa el asunto.";
+    if (!/^\S+@\S+\.\S+$/.test(values.email)) return "Por favor ingresa un correo válido.";
+    if (!values.number.trim()) return "Por favor ingresa tu número telefónico.";
+    if (!values.subject.trim()) return "Por favor ingresa el asunto.";
     return "";
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (status.type === "loading") return;
     const err = validate();
     if (err) {
       setStatus({ type: "error", msg: err });
@@ -41,25 +42,26 @@ export default function ContactForm({
     setStatus({ type: "loading", msg: "Enviando..." });
 
     try {
-      // If parent provides onSubmit, use it. Otherwise fall back to mailto.
-      if (onSubmit) {
-        await onSubmit(values);
-      } else {
-        const subject = encodeURIComponent(`Trignia — ${values.asunto}`);
-        const body = encodeURIComponent(
-          `Nombre: ${values.nombre}\nClínica: ${values.clinica}\nCorreo: ${values.correo}\nTeléfono: ${values.telefono}\nAsunto: ${values.asunto}\n`
-        );
-        window.location.href = `mailto:?subject=${subject}&body=${body}`;
-      }
+    await sendLead(values); // 🔥 aquí pasa todo
 
-      setStatus({ type: "success", msg: "¡Listo! Recibimos tu mensaje." });
-      setValues({ nombre: "", clinica: "", correo: "", telefono: "", asunto: "" });
-    } catch (error) {
-      setStatus({
-        type: "error",
-        msg: "Hubo un error al enviar. Intenta de nuevo.",
-      });
-    }
+    setStatus({
+      type: "success",
+      msg: "¡Listo! Recibimos tu mensaje.",
+    });
+
+    setValues({
+      name: "",
+      clinic: "",
+      email: "",
+      number: "",
+      subject: "",
+    });
+  } catch (error) {
+    setStatus({
+      type: "error",
+      msg: error?.message || "Hubo un error al enviar. Intenta de nuevo.",
+    });
+  }
   };
 
   return (
@@ -133,8 +135,8 @@ export default function ContactForm({
                 <Field
                   id={`${formId}-nombre`}
                   label="Nombre"
-                  value={values.nombre}
-                  onChange={update("nombre")}
+                  value={values.name}
+                  onChange={update("name")}
                   placeholder="Tu nombre"
                   autoComplete="name"
                 />
@@ -142,8 +144,8 @@ export default function ContactForm({
                 <Field
                   id={`${formId}-clinica`}
                   label="Clínica"
-                  value={values.clinica}
-                  onChange={update("clinica")}
+                  value={values.clinic}
+                  onChange={update("clinic")}
                   placeholder="Nombre de tu clínica"
                 />
 
@@ -151,8 +153,8 @@ export default function ContactForm({
                   id={`${formId}-correo`}
                   label="Correo"
                   type="email"
-                  value={values.correo}
-                  onChange={update("correo")}
+                  value={values.email}
+                  onChange={update("email")}
                   placeholder="tu@correo.com"
                   autoComplete="email"
                 />
@@ -161,8 +163,8 @@ export default function ContactForm({
                   id={`${formId}-telefono`}
                   label="Número telefónico"
                   type="tel"
-                  value={values.telefono}
-                  onChange={update("telefono")}
+                  value={values.number}
+                  onChange={update("number")}
                   placeholder="+506 8888 8888"
                   autoComplete="tel"
                 />
@@ -170,8 +172,8 @@ export default function ContactForm({
                 <Field
                   id={`${formId}-asunto`}
                   label="Asunto"
-                  value={values.asunto}
-                  onChange={update("asunto")}
+                  value={values.subject}
+                  onChange={update("subject")}
                   placeholder="¿En qué te podemos ayudar?"
                 />
 
