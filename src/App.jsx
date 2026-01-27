@@ -6,6 +6,7 @@ import WhySection from './components/sections/WhySection'
 import Testimonials from './components/sections/Testimonials'
 import ContactForm from './components/ContactForm'
 import Navbar from './layouts/Nabvar'
+import ChatWidget from './components/ChatWidget'
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
        <WhySection />
       <Testimonials />
       <ContactForm />
+      <ChatWidget/>
     </div>
   )
 }
