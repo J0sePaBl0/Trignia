@@ -3,12 +3,13 @@ import { motion } from 'framer-motion'
 
 export default function Steps() {
   return (
-    <section className="w-full mt-20 "style={{
+    <section  className="w-full mt-20 "style={{
         background:
           "linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(237,237,237,0.88) 30%, rgba(245,245,245,0.91) 40%, rgba(230,235,232,0.92) 60%, rgba(233,245,244,1) 100%)",
       }}>
         <div className="mb-50 text-center title-font text-3xl md:text-4xl font-bold subtitle-styles">
-        <motion.h1 
+        <motion.h1
+        id="steps"   
         initial = {{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -62,7 +63,7 @@ export default function Steps() {
         </motion.button>
       </div>
       <div  className="max-w-6xl mx-auto px-6 pb-5">
-        <h2 id="steps"  className="text-2xl font-bold subtitle-styles mb-12">Como funciona</h2>
+        <h2 className="text-2xl font-bold subtitle-styles mb-12">Como funciona</h2>
 
         <div className="relative">
           {/* cross lines */}

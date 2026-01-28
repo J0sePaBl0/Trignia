@@ -27,7 +27,6 @@ export default function Navbar() {
         return;
       }
     }
-    window.location.href = "mailto:hola@trignia.com?subject=Agendar%20reunión";
   };
 
   const go = (id) => {
@@ -85,9 +84,10 @@ export default function Navbar() {
 
           {/* Links (desktop) */}
           <div className="hidden md:flex items-center gap-6">
-            <NavLink onClick={() => scrollToId("problems")}>Problemas</NavLink>
-            <NavLink onClick={() => scrollToId("steps")}>Cómo funciona</NavLink>
+            <NavLink onClick={() => scrollToId("problems")}>¿Que solucionamos?</NavLink>
+            <NavLink onClick={() => scrollToId("steps")}>¿Cómo funciona?</NavLink>
             <NavLink onClick={() => scrollToId("testimonials")}>Testimonios</NavLink>
+            <NavLink onClick={() => scrollToId("whysection")}>¿Por qué trignia?</NavLink>
             <NavLink onClick={() => scrollToId("contact")}>Contacto</NavLink>
           </div>
 
