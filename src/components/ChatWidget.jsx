@@ -25,14 +25,14 @@ export default function ChatWidget({
         aria-label={open ? "Cerrar chat" : "Abrir chat"}
         aria-expanded={open}
         className={[
-          "fixed bottom-5 right-5 border border-emerald-700",
-          "h-16 w-40 rounded-full shadow-lg",
+          "fixed bottom-5 right-5 ",
+          "h-16 w-40 rounded-full shadow-lg border border-zinc-300",
           "flex items-center justify-end",
           "transition-transform duration-200 active:scale-[0.98] text-font-strong text-(--color-titles-color) gap-2",
         ].join(" ")}
         style={{
           background: "white",
-          boxShadow: "0 18px 40px rgba(15, 23, 42, 0.25)",
+          boxShadow: "-10px 10px 20px rgba(15, 23, 42, 0.25)",
         }}
       >
         Trigny
