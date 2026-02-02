@@ -42,7 +42,7 @@ export default function ContactForm({
     setStatus({ type: "loading", msg: "Enviando..." });
 
     try {
-    await sendLead(values); // 🔥 aquí pasa todo
+    await sendLead(values);
 
     setStatus({
       type: "success",
@@ -165,7 +165,7 @@ export default function ContactForm({
                   type="tel"
                   value={values.number}
                   onChange={update("number")}
-                  placeholder="+506 8888 8888"
+                  placeholder="70878938"
                   autoComplete="tel"
                 />
 

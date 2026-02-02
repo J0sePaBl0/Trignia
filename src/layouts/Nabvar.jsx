@@ -86,7 +86,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-6">
             <NavLink onClick={() => scrollToId("problems")}>¿Que solucionamos?</NavLink>
             <NavLink onClick={() => scrollToId("steps")}>¿Cómo funciona?</NavLink>
-            <NavLink onClick={() => scrollToId("testimonials")}>Testimonios</NavLink>
+            {/*<NavLink onClick={() => scrollToId("testimonials")}>Testimonios</NavLink>*/}
             <NavLink onClick={() => scrollToId("whysection")}>¿Por qué trignia?</NavLink>
             <NavLink onClick={() => scrollToId("contact")}>Contacto</NavLink>
           </div>

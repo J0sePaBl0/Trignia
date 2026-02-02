@@ -49,7 +49,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="testimonials" className="relative bg-white overflow-hidden"
+    <section id="testimonials" className="relative bg-white overflow-hidden hidden"
     style={{
           background: `linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0.80) 30%, rgba(255,255,255,1) 40%, rgba(230,235,232,0.92) 60%, rgba(346,245,244,100) 100%)`,
         }}>
