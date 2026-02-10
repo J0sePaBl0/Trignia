@@ -84,6 +84,7 @@ export default function ChatPanel({
     }
   };
 
+
   return (
     <div
       className="rounded-3xl overflow-hidden border border-emerald-100 bg-white shadow-[0_22px_70px_-40px_rgba(15,23,42,0.45)]"
@@ -124,7 +125,7 @@ export default function ChatPanel({
         ref={listRef}
         className="max-h-105 overflow-y-auto px-4 py-4 bg-[rgba(233,245,244,0.35)] "
       >
-        <div className="space-y-3">
+        <div className="space-y-3 ">
           {messages.map((m) => (
             <MessageBubble key={m.id} msg={m} />
           ))}
@@ -163,13 +164,32 @@ export default function ChatPanel({
     </div>
   );
 }
+function linkify(text) {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  return text.split(urlRegex).map((part, i) => {
+    if (part.match(urlRegex)) {
+      return (
+        <a
+          key={i}
+          href={part}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-emerald-600 font-medium underline hover:text-emerald-700"
+        >
+          {part}
+        </a>
+      );
+    }
+    return part;
+  });
+}
 
 function MessageBubble({ msg }) {
   const isUser = msg.role === "user";
 
   if (msg.typing) {
     return (
-      <div className="flex justify-start text-start ">
+      <div id="bubble-start" className="flex justify-start text-start ">
         <div className="rounded-2xl bg-white border border-slate-100 px-4 py-3 shadow-sm ">
           <TypingDots />
         </div>
@@ -190,7 +210,9 @@ function MessageBubble({ msg }) {
         ].join(" ")}
         style={isUser ? { background: "var(--color-primary-color)" } : undefined}
       >
-        <div className="whitespace-pre-wrap">{msg.text}</div>
+        <div className="whitespace-pre-wrap">
+          {msg.role === "bot" ? linkify(msg.text) : msg.text}
+        </div>
         <div className="mt-1 text-[10px] opacity-60 text-right">
           {formatTime(msg.ts)}
         </div>
