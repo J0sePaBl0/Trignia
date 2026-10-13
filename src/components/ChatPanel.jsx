@@ -8,6 +8,7 @@ export default function ChatPanel({
   title = "Trigny",
   subtitle = "Asistente de Trignia",
   onClose,
+  onBotMessage,
 }) {
   const [messages, setMessages] = useState(() => [
     {
@@ -57,6 +58,7 @@ export default function ChatPanel({
       ]);
 
       const reply = await sendMessageToBot(text, { source: "trignia-web" });
+      if (String(reply ?? "").trim()) onBotMessage?.();
 
       // Replace typing bubble with real reply
       setMessages((m) => {
@@ -87,13 +89,13 @@ export default function ChatPanel({
 
   return (
     <div
-      className="rounded-3xl overflow-hidden border border-emerald-100 bg-white shadow-[0_22px_70px_-40px_rgba(15,23,42,0.45)]"
+      className="flex flex-col min-h-0 max-h-full rounded-3xl overflow-hidden border border-emerald-100 bg-white shadow-[0_22px_70px_-40px_rgba(15,23,42,0.45)]"
       role="dialog"
       aria-label="Chat con Trigny"
     >
       {/* Header */}
       <div
-        className="px-5 py-4 flex items-center justify-between"
+        className="shrink-0 px-5 py-4 flex items-center justify-between"
         style={{
           background: "linear-gradient(90deg, rgba(65,140,126,1), rgba(69,173,127,1))",
         }}
@@ -123,7 +125,7 @@ export default function ChatPanel({
       {/* Messages */}
       <div
         ref={listRef}
-        className="max-h-105 overflow-y-auto px-4 py-4 bg-[rgba(233,245,244,0.35)] "
+        className="min-h-0 flex-1 max-h-105 overflow-y-auto px-4 py-4 bg-[rgba(233,245,244,0.35)] "
       >
         <div className="space-y-3 ">
           {messages.map((m) => (
@@ -133,7 +135,7 @@ export default function ChatPanel({
       </div>
 
       {/* Composer */}
-      <div className="p-4 border-t border-slate-100 bg-white">
+      <div className="shrink-0 p-4 border-t border-slate-100 bg-white">
         <div className="flex items-end gap-3">
           <div className="flex-1">
             <textarea disabled={sending}

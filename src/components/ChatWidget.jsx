@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ChatPanel from "./ChatPanel";
 
 export default function ChatWidget({
@@ -6,6 +6,18 @@ export default function ChatWidget({
   subtitle = "Asistente de Trignia",
 }) {
   const [open, setOpen] = useState(false);
+  const [unread, setUnread] = useState(0);
+  const openRef = useRef(false);
+
+  // Keep a ref in sync so async bot replies see the current state; clear badge on open
+  useEffect(() => {
+    openRef.current = open;
+    if (open) setUnread(0);
+  }, [open]);
+
+  const handleBotMessage = () => {
+    if (!openRef.current) setUnread((n) => n + 1);
+  };
 
   // ESC to close
   useEffect(() => {
@@ -37,6 +49,16 @@ export default function ChatWidget({
       >
         Trigny
         {open ? <CloseIcon /> : <ChatIcon />}
+
+        {!open && unread > 0 && (
+          <span
+            className="absolute -top-2 -right-1 min-w-6 h-6 px-1.5 rounded-full flex items-center justify-center text-xs font-bold text-white shadow-md"
+            style={{ background: "var(--color-primary-color)" }}
+            aria-label={`${unread} mensajes sin leer`}
+          >
+            {unread > 9 ? "9+" : unread}
+          </span>
+        )}
       </button>
 
       {/* Panel */}
@@ -44,6 +66,7 @@ export default function ChatWidget({
         className={[
           "fixed bottom-24 right-5 z-[9999]",
           "w-[92vw] max-w-[390px]",
+          "max-h-[calc(100dvh-7rem)] flex flex-col",
           "transition-all duration-200 ease-out",
           open
             ? "opacity-100 translate-y-0 pointer-events-auto"
@@ -54,6 +77,7 @@ export default function ChatWidget({
           title={title}
           subtitle={subtitle}
           onClose={() => setOpen(false)}
+          onBotMessage={handleBotMessage}
         />
       </div>
     </>
