@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Agendar: La agenda semanal</title>
+<link href="https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Inter:wght@500;600;700&family=Lunasima:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { width: 1440px; height: 900px; overflow: hidden; font-family: Lunasima, system-ui, sans-serif; color: #555353;
+    background: linear-gradient(to bottom, #E9F5F4 0%, #f1f3f2 35%, #f5f5f5 55%, #e8eeeb 80%, #E9F5F4 100%); }
+  .nav { position: absolute; top: 20px; left: 144px; right: 144px; height: 64px; border-radius: 9999px; background: rgba(255,255,255,.75);
+    border: 1px solid #d5ece6; box-shadow: 0 12px 40px -26px rgba(15,23,42,.35); display: flex; align-items: center; justify-content: space-between; padding: 0 28px; }
+  .brand { font-family: Asap, sans-serif; font-weight: 700; font-size: 26px; color: #0E6B5A; }
+  .nav a { font-family: Inter, sans-serif; font-weight: 600; font-size: 14px; color: #334155; text-decoration: none; }
+  .head { position: absolute; top: 118px; left: 144px; right: 144px; display: flex; justify-content: space-between; align-items: flex-end; }
+  h1 { font-family: Asap, sans-serif; font-weight: 700; font-size: 56px; letter-spacing: -0.025em; color: #0E6B5A; line-height: 1; }
+  .week { font-family: Inter, sans-serif; font-weight: 700; font-size: 22px; color: #418C7E; }
+  .week span { letter-spacing: 14px; margin-left: 18px; color: #0E6B5A; }
+  .grid { position: absolute; top: 214px; left: 144px; right: 144px; bottom: 132px; display: grid; grid-template-columns: 110px repeat(5, 1fr);
+    grid-template-rows: 78px 1fr 1fr; background: #fff; border-radius: 16px; box-shadow: 0 26px 70px -24px rgba(5,150,105,.25); overflow: hidden; }
+  .d { background: #418C7E; color: #fff; text-align: center; padding-top: 12px; font-family: Inter, sans-serif; font-weight: 600; font-size: 15px; }
+  .d b { display: block; font-family: Asap, sans-serif; font-weight: 700; font-size: 30px; line-height: 1.1; }
+  .band { display: flex; align-items: center; justify-content: center; font-family: Inter, sans-serif; font-weight: 700; font-size: 17px; color: #0E6B5A; background: #E9F5F4; }
+  .c { padding: 16px 14px; display: flex; flex-direction: column; gap: 10px; border-left: 1px solid #dcebe7; }
+  .am { border-bottom: 1px solid #dcebe7; }
+  .c span { font-family: Inter, sans-serif; font-weight: 600; font-size: 17px; color: #0E6B5A; text-align: center; padding: 11px 0; border-radius: 9999px; background: #dff0ec; }
+  .c span.on { background: #0E6B5A; color: #fff; box-shadow: 0 12px 26px -10px rgba(14,107,90,.6); }
+  .c em { font-style: normal; font-size: 15px; color: #a3b5b0; text-align: center; padding-top: 10px; }
+  .bar { position: absolute; left: 144px; right: 144px; bottom: 36px; height: 76px; border-radius: 9999px; background: rgba(255,255,255,.85); border: 1px solid #d5ece6;
+    display: flex; align-items: center; justify-content: space-between; padding: 0 12px 0 36px; }
+  .bar p { font-family: Inter, sans-serif; font-weight: 700; font-size: 22px; color: #0E6B5A; }
+  .bar p small { font-family: Lunasima, sans-serif; font-weight: 400; font-size: 16px; color: #555353; margin-left: 16px; }
+  .cta { padding: 15px 44px; border-radius: 9999px; color: #fff; font-family: Inter, sans-serif; font-weight: 600; font-size: 18px; background: linear-gradient(90deg,#16a34a,#059669 50%,#065f46); }
+</style>
+</head>
+<body>
+  <div class="nav"><span class="brand">Trignia</span><a href="#">Volver al inicio</a></div>
+  <div class="head"><h1>Agenda tu reunión</h1><div class="week">12 al 16 de octubre <span>‹ ›</span></div></div>
+  <div class="grid">
+    <div class="d" style="background:#0E6B5A"></div>
+    <div class="d">Lunes<b>12</b></div><div class="d">Martes<b>13</b></div><div class="d">Miércoles<b>14</b></div><div class="d">Jueves<b>15</b></div><div class="d">Viernes<b>16</b></div>
+    <div class="band am">Mañana</div>
+    <div class="c am"><span>9:00</span><span>11:30</span></div>
+    <div class="c am"><span>10:00</span><span>11:00</span></div>
+    <div class="c am"><span>9:00</span><span class="on">10:00</span><span>11:30</span></div>
+    <div class="c am"><em>Sin espacios</em></div>
+    <div class="c am"><span>9:30</span><span>11:00</span></div>
+    <div class="band">Tarde</div>
+    <div class="c"><span>2:00</span><span>4:00</span></div>
+    <div class="c"><span>3:00</span></div>
+    <div class="c"><span>2:30</span><span>4:30</span></div>
+    <div class="c"><span>2:00</span><span>3:30</span></div>
+    <div class="c"><em>Sin espacios</em></div>
+  </div>
+  <div class="bar"><p>Miércoles 14, 10:00 a.m. <small>en tu hora local (horarios de ejemplo)</small></p><span class="cta">Continuar con mis datos</span></div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+{
+  "title": "Página /agendar: elige la estructura",
+  "question": "Tres formas de organizar la página para agendar una reunión. Mismo estilo Trignia en todas; cambia la composición. Elige una, pide ajustes o vuelve a repartir.",
+  "options": [
+    {
+      "id": "proximo-espacio",
+      "label": "El próximo espacio",
+      "kicker": "THE ROLL",
+      "lineage": "La recepcionista que dice: tengo mañana a las 9",
+      "thesis": "La página abre ofreciendo el primer espacio libre; reservar toma un clic.",
+      "palette": ["#E9F5F4", "#0E6B5A", "#418C7E", "#059669"],
+      "materials": ["fondo menta degradado", "tipografía Asap grande"],
+      "viewport": "El próximo espacio libre en tipografía enorme con su botón, y a la derecha una lista corta de otros horarios y el enlace al calendario completo.",
+      "risk": "Si el primer espacio no le sirve al visitante, depende de la lista secundaria.",
+      "html": ".impeccable/mocks/decision/proximo-espacio.html"
+    },
+    {
+      "id": "tarjeta-cita",
+      "label": "La tarjeta de cita",
+      "lineage": "La tarjeta de próxima cita que entrega una clínica",
+      "thesis": "Una tarjeta de cita se va llenando mientras eliges fecha y hora.",
+      "palette": ["#E9F5F4", "#0E6B5A", "#418C7E", "#FFFFFF"],
+      "materials": ["tarjeta blanca con talón", "calendario mensual"],
+      "viewport": "A la izquierda la tarjeta de cita con los datos elegidos; a la derecha el calendario del mes y los horarios del día.",
+      "risk": "Es la composición más cercana a la plantilla habitual de dos columnas.",
+      "raised": [
+        { "from": "challenger-ticket-wallet", "raise": "La tarjeta conserva un talón que registra la reserva: nada desaparece, queda anotado." }
+      ],
+      "html": ".impeccable/mocks/decision/tarjeta-cita.html"
+    },
+    {
+      "id": "agenda-semanal",
+      "label": "La agenda semanal",
+      "lineage": "La agenda de la semana en la recepción de una clínica",
+      "thesis": "Toda la semana con sus espacios libres a la vista, como una agenda abierta.",
+      "palette": ["#E9F5F4", "#0E6B5A", "#418C7E", "#A2D4CA"],
+      "materials": ["rejilla de cinco días", "franjas de mañana y tarde"],
+      "viewport": "Cinco columnas de lunes a viernes con los horarios libres, y una barra inferior con el espacio elegido y el botón para continuar.",
+      "risk": "Es la más densa; en el teléfono debe convertirse en un día a la vez.",
+      "raised": [
+        { "from": "challenger-daylight-section", "raise": "Los horarios se ordenan en franjas de mañana y tarde que recorren toda la semana." }
+      ],
+      "html": ".impeccable/mocks/decision/agenda-semanal.html"
+    },
+    {
+      "id": "challenger-ticket-wallet",
+      "label": "Billetera de boletos aéreos",
+      "verdict": "declined",
+      "lineage": "boletos de aerolínea con cupones",
+      "thesis": "La reserva como un talonario de cupones que se desprenden.",
+      "palette": ["#1b2a52", "#c8312b", "#ffffff"],
+      "materials": ["papel de cupón", "números de carbón"],
+      "viewport": "Un cupón por paso de la reserva.",
+      "case": "Una clínica no se identifica con un viaje en avión y la paleta rompe la identidad.",
+      "kept": "El talón que registra lo reservado.",
+      "risk": "Disfraz ajeno al mundo clínico.",
+      "hero": "https://impeccable.style/worlds/cards/vernacular-ephemera-jet-age-ticket-wallet-hero.webp"
+    },
+    {
+      "id": "challenger-daylight-section",
+      "label": "Sección de luz diurna",
+      "verdict": "declined",
+      "lineage": "cortes arquitectónicos con recorrido del sol",
+      "thesis": "El día como una franja continua de luz donde caen los horarios.",
+      "palette": ["#f4f1ea", "#2b2b2b", "#e2b23c"],
+      "materials": ["cal blanca", "haz dorado"],
+      "viewport": "Un corte de edificio con horas marcadas.",
+      "case": "Hermosa pero oscurece la acción: el visitante debe leer un dibujo para reservar.",
+      "kept": "El día leído en franjas de mañana y tarde.",
+      "risk": "La metáfora compite con la tarea.",
+      "hero": "https://impeccable.style/worlds/cards/architecture-inhabitable-space-daylight-section-hero.webp"
+    },
+    {
+      "id": "challenger-cloud-edge",
+      "label": "Borde de nube iridiscente",
+      "verdict": "declined",
+      "lineage": "nubes iridiscentes",
+      "thesis": "Blanco calmado con un borde fino de color en el estado activo.",
+      "palette": ["#ffffff", "#5b6470", "#9fe0c8", "#b9a2e8"],
+      "materials": ["blanco de nube", "franja espectral"],
+      "viewport": "Campo blanco con color solo en los bordes.",
+      "case": "Añade rosa y violeta, que rompen la regla de un solo tono.",
+      "kept": "El color reservado para el estado activo.",
+      "risk": "Segundo tono de acento prohibido por el sistema.",
+      "hero": "https://impeccable.style/worlds/cards/clouds-storms-auroras-iridescent-cloud-edge-hero.webp"
+    }
+  ],
+  "reroll": true,
+  "buildPath": { "value": "code" },
+  "steer": true
+}

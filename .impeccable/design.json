@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-09T00:00:00.000Z",
+  "title": "Design System: Trignia",
+  "extensions": {
+    "colorMeta": {
+      "clinical-teal": { "role": "primary", "displayName": "Clinical Teal", "canonical": "#418C7E", "tonalRamp": ["#14302A", "#1F4A41", "#2B6358", "#357A6C", "#418C7E", "#68A89C", "#9CC7BE", "#D3E8E4"] },
+      "deep-forest-teal": { "role": "primary", "displayName": "Deep Forest Teal", "canonical": "#0E6B5A", "tonalRamp": ["#04211C", "#073A31", "#0A4F42", "#0E6B5A", "#318576", "#5FA195", "#9BC4BC", "#D4E7E3"] },
+      "mist": { "role": "neutral", "displayName": "Mist", "canonical": "#E9F5F4", "tonalRamp": ["#3E4D4B", "#60706E", "#82938F", "#A5B6B3", "#C4D4D1", "#D6E5E3", "#E9F5F4", "#F6FBFA"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles." },
+      "title": { "displayName": "Title", "purpose": "Card titles." },
+      "body": { "displayName": "Body", "purpose": "Paragraphs." },
+      "label": { "displayName": "Label", "purpose": "Nav links and buttons." }
+    },
+    "shadows": [
+      { "name": "nav-float", "value": "0 12px 40px -26px rgba(15,23,42,0.35)", "purpose": "Floating glass navbar." },
+      { "name": "card-rest", "value": "0 14px 40px rgba(2,6,23,0.10)", "purpose": "Problem cards at rest." },
+      { "name": "card-hover", "value": "0 26px 70px rgba(5,150,105,0.20)", "purpose": "Green glow on card hover." },
+      { "name": "cta-glow", "value": "0 30px 60px rgba(5,150,105,0.18)", "purpose": "Primary CTA hover." }
+    ],
+    "motion": [
+      { "name": "ease-premium", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Card entrance (observed)." },
+      { "name": "ease-hover", "value": "cubic-bezier(0.2, 0.9, 0.2, 1)", "purpose": "Landing card hover lift (observed)." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary CTA Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Pill call-to-action with green gradient, used to book a meeting.",
+      "html": "<button class=\"ds-btn-primary\">Agendar una reunión</button>",
+      "css": ".ds-btn-primary { background-image: linear-gradient(90deg,#16a34a 0%,#059669 50%,#065f46 100%); color:#fff; font-weight:600; font-size:16px; padding:12px 40px; border:none; border-radius:9999px; box-shadow:0 10px 15px rgba(0,0,0,.1); transition: transform .2s ease-out, box-shadow .2s ease-out; cursor:pointer; } .ds-btn-primary:hover { transform: scale(1.03); box-shadow:0 30px 60px rgba(5,150,105,0.18); } .ds-btn-primary:active { transform: scale(.98); } .ds-btn-primary:focus-visible { outline:none; box-shadow:0 0 0 4px #a7f3d0; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outlined pill for 'Conocer más'.",
+      "html": "<button class=\"ds-btn-secondary\">Conocer más</button>",
+      "css": ".ds-btn-secondary { background:transparent; color:#0E6B5A; font-weight:700; font-size:14px; padding:12px 40px; border:2px solid #418C7E; border-radius:9999px; transition: filter .2s ease-out, transform .15s ease-out; cursor:pointer; } .ds-btn-secondary:hover { filter:brightness(.9); } .ds-btn-secondary:active { transform:scale(.99); } .ds-btn-secondary:focus-visible { outline:none; box-shadow:0 0 0 4px #a7f3d0; }"
+    },
+    {
+      "name": "Nav CTA",
+      "kind": "nav",
+      "refersTo": "button-nav",
+      "description": "Compact solid teal 'Agendar' button in the glass navbar.",
+      "html": "<button class=\"ds-nav-cta\">Agendar</button>",
+      "css": ".ds-nav-cta { background:#418C7E; color:#fff; font-weight:600; font-size:14px; padding:8px 20px; border:none; border-radius:9999px; box-shadow:0 1px 2px rgba(0,0,0,.05); transition: transform .15s ease-out; cursor:pointer; } .ds-nav-cta:active { transform:scale(.99); } .ds-nav-cta:focus-visible { outline:none; box-shadow:0 0 0 4px #a7f3d0; }"
+    },
+    {
+      "name": "Problem Card",
+      "kind": "card",
+      "refersTo": "card-problem",
+      "description": "White rounded card with icon circle, title, description and teal highlight band.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-body\"><h3>Título del problema</h3><p>Descripción breve del desafío que enfrenta la clínica.</p></div><div class=\"ds-card-band\">Cómo lo resolvemos</div></div>",
+      "css": ".ds-card { background:rgba(255,255,255,.9); border-radius:16px; box-shadow:0 14px 40px rgba(2,6,23,.10), 0 0 0 1px rgba(0,0,0,.05); overflow:hidden; max-width:320px; text-align:center; transition: transform .22s ease-out, box-shadow .22s ease-out; } .ds-card:hover { transform:translateY(-8px); box-shadow:0 26px 70px rgba(5,150,105,.20), 0 0 0 1px rgba(0,0,0,.05); } .ds-card-body { padding:24px; } .ds-card h3 { color:#047857; font-size:20px; font-weight:600; margin:0 0 12px; } .ds-card p { color:#555353; font-size:16px; line-height:1.6; margin:0; } .ds-card-band { background:#418C7E; color:#fff; font-size:17px; font-weight:600; padding:20px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Calm Clinic",
+    "overview": "Trignia looks like a well-run clinic reception made digital: airy, clean and reassuring. Soft mint-to-white gradients wash over the page, a frosted-glass pill navbar floats above, and rounded white cards carry the content. The system is soft and approachable rather than flashy, serving clinic owners and operations managers who need to feel safe before they book a meeting.",
+    "keyCharacteristics": [
+      "Mint and white atmosphere with a single teal-green hue family",
+      "Frosted-glass floating pill navigation",
+      "Pill-shaped actions, 16px rounded cards, diffuse shadows that deepen on hover",
+      "Centered, spacious sections that lead to one action: booking a meeting"
+    ],
+    "rules": [
+      { "name": "The One Hue Rule", "body": "Every color is a teal-green or a neutral. No second accent hue is introduced.", "section": "colors" },
+      { "name": "The Mist Ground Rule", "body": "Section backgrounds are mint-to-white gradients, never flat saturated fills.", "section": "colors" },
+      { "name": "The Three Voices Rule", "body": "Asap for display, Inter for structure, Lunasima for reading; do not add a fourth family.", "section": "typography" },
+      { "name": "The Lift On Hover Rule", "body": "Shadows are quiet at rest and deepen only on interaction.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do stay within the teal-green family on a mint-white ground.",
+      "Do keep one primary action per view: book a meeting.",
+      "Do use pill shapes for actions and 16px radius for cards.",
+      "Do keep shadows soft and tinted; deepen them on hover.",
+      "Do preserve the Trignia logo and the existing brand colors."
+    ],
+    "donts": [
+      "Don't invent testimonials, client names or statistics; real proof does not exist yet.",
+      "Don't introduce a second accent hue.",
+      "Don't add a fourth font family.",
+      "Don't use hard black shadows or flat saturated section fills."
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Agendar: La tarjeta de cita</title>
+<link href="https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Inter:wght@500;600;700&family=Lunasima:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { width: 1440px; height: 900px; overflow: hidden; font-family: Lunasima, system-ui, sans-serif; color: #555353;
+    background: linear-gradient(to bottom, #E9F5F4 0%, #f1f3f2 35%, #f5f5f5 55%, #e8eeeb 80%, #E9F5F4 100%); }
+  .nav { position: absolute; top: 20px; left: 144px; right: 144px; height: 64px; border-radius: 9999px; background: rgba(255,255,255,.75);
+    border: 1px solid #d5ece6; box-shadow: 0 12px 40px -26px rgba(15,23,42,.35); display: flex; align-items: center; justify-content: space-between; padding: 0 28px; }
+  .brand { font-family: Asap, sans-serif; font-weight: 700; font-size: 26px; color: #0E6B5A; }
+  .nav a { font-family: Inter, sans-serif; font-weight: 600; font-size: 14px; color: #334155; text-decoration: none; }
+  .wrap { position: absolute; top: 130px; left: 144px; right: 144px; bottom: 50px; display: grid; grid-template-columns: 520px 1fr; gap: 80px; align-items: start; }
+  .ticket { background: #fff; border-radius: 16px; box-shadow: 0 26px 70px -20px rgba(5,150,105,.28); overflow: hidden; margin-top: 20px; }
+  .ticket .top { background: #418C7E; color: #fff; padding: 30px 40px; }
+  .ticket .top h1 { font-family: Asap, sans-serif; font-weight: 700; font-size: 44px; line-height: 1.05; letter-spacing: -0.02em; }
+  .ticket .body { padding: 34px 40px 30px; }
+  .f { padding: 0 0 22px; }
+  .f small { display: block; font-family: Inter, sans-serif; font-weight: 600; font-size: 14px; color: #418C7E; }
+  .f div { font-family: Asap, sans-serif; font-weight: 700; font-size: 38px; color: #0E6B5A; line-height: 1.15; }
+  .f .empty { color: #a9c9c1; }
+  .stub { border-top: 2px dashed #b9d9d1; padding: 22px 40px 28px; font-size: 16px; line-height: 1.5; }
+  h2 { font-family: Inter, sans-serif; font-weight: 700; font-size: 24px; color: #0E6B5A; display: flex; justify-content: space-between; align-items: center; }
+  h2 span { font-weight: 600; font-size: 22px; color: #418C7E; letter-spacing: 12px; }
+  .cal { margin-top: 20px; display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; text-align: center; font-family: Inter, sans-serif; }
+  .cal i { font-style: normal; font-weight: 600; font-size: 14px; color: #6b7f7a; padding-bottom: 6px; }
+  .cal b { font-weight: 600; font-size: 19px; height: 50px; line-height: 50px; border-radius: 9999px; color: #0E6B5A; }
+  .cal b.off { color: #b6c4c0; font-weight: 500; }
+  .cal b.on { background: #418C7E; color: #fff; }
+  .cal b.free { background: #dff0ec; }
+  h3 { margin-top: 26px; font-family: Inter, sans-serif; font-weight: 700; font-size: 18px; color: #0E6B5A; }
+  .times { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .times span { font-family: Inter, sans-serif; font-weight: 600; font-size: 17px; color: #0E6B5A; padding: 12px 26px; border-radius: 9999px; border: 2px solid #9fcfc4; background: #fff; }
+</style>
+</head>
+<body>
+  <div class="nav"><span class="brand">Trignia</span><a href="#">Volver al inicio</a></div>
+  <div class="wrap">
+    <div class="ticket">
+      <div class="top"><h1>Tu reunión con Trignia</h1></div>
+      <div class="body">
+        <div class="f"><small>Fecha</small><div>Martes 13 de octubre</div></div>
+        <div class="f"><small>Hora</small><div class="empty">Elige una hora</div></div>
+        <div class="f"><small>A nombre de</small><div class="empty">Tus datos</div></div>
+      </div>
+      <div class="stub">Conversemos sobre tu clínica y la mejor forma de resolver sus desafíos. Las horas se muestran en tu hora local.</div>
+    </div>
+    <div>
+      <h2>Octubre 2026 <span>‹ ›</span></h2>
+      <div class="cal">
+        <i>Lun</i><i>Mar</i><i>Mié</i><i>Jue</i><i>Vie</i><i>Sáb</i><i>Dom</i>
+        <b class="off"></b><b class="off"></b><b class="off"></b><b class="off">1</b><b class="off">2</b><b class="off">3</b><b class="off">4</b>
+        <b class="off">5</b><b class="off">6</b><b class="off">7</b><b class="off">8</b><b class="off">9</b><b class="off">10</b><b class="off">11</b>
+        <b class="free">12</b><b class="on">13</b><b class="free">14</b><b class="free">15</b><b class="free">16</b><b class="off">17</b><b class="off">18</b>
+        <b class="free">19</b><b class="free">20</b><b class="free">21</b><b class="free">22</b><b class="free">23</b><b class="off">24</b><b class="off">25</b>
+        <b class="free">26</b><b class="free">27</b><b class="free">28</b><b class="free">29</b><b class="free">30</b><b class="off">31</b><b class="off"></b>
+      </div>
+      <h3>Horarios del martes 13 (ejemplo)</h3>
+      <div class="times"><span>9:00 a.m.</span><span>10:00 a.m.</span><span>11:30 a.m.</span><span>2:00 p.m.</span><span>3:00 p.m.</span><span>4:30 p.m.</span></div>
+    </div>
+  </div>
+</body>
+</html>
