@@ -27,3 +27,6 @@ dist-ssr
 .env.*
 .vercel
 .env*.local
+
+# Skill links created by the skills tool (absolute paths, machine-specific; real files live in .agents/)
+.claude/skills/
