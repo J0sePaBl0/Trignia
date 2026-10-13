@@ -3,7 +3,7 @@ import React, { useId, useState } from "react";
 import { sendLead } from "../services/leads";
 
 export default function ContactForm({
-  scheduleHref = "#",
+  scheduleHref = "/agendar",
   accentHex = "#10b981", // emerald vibe
 }) {
   const formId = useId();

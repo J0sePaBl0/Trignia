@@ -18,17 +18,6 @@ export default function Navbar() {
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  const ctaClick = () => {
-    const ids = ["contact", "contacto", "contact-section", "contacto-section", "contacto-form"];
-    for (const id of ids) {
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-        return;
-      }
-    }
-  };
-
   const go = (id) => {
     setOpen(false);
     scrollToId(id);
@@ -93,12 +82,9 @@ export default function Navbar() {
 
           {/* Right side */}
           <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => {
-                setOpen(false);
-                ctaClick();
-              }}
+            <a
+              href="/agendar"
+              onClick={() => setOpen(false)}
               className="
                 hidden sm:inline-flex
                 items-center gap-2
@@ -119,7 +105,7 @@ export default function Navbar() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </button>
+            </a>
 
             {/* Mobile toggle */}
             <button
@@ -165,12 +151,9 @@ export default function Navbar() {
               <MobileLink onClick={() => go("testimonials")}>Testimonios</MobileLink>
               <MobileLink onClick={() => go("contact")}>Contacto</MobileLink>
 
-              <button
-                type="button"
-                onClick={() => {
-                  setOpen(false);
-                  ctaClick();
-                }}
+              <a
+                href="/agendar"
+                onClick={() => setOpen(false)}
                 className="
                   mt-2 w-full
                   inline-flex items-center justify-center gap-2
@@ -191,7 +174,7 @@ export default function Navbar() {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
         </div>

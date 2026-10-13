@@ -40,27 +40,19 @@ export default function Steps() {
           .btn-modern:active { transform: translateY(-4px) scale(1.02) !important; }
         `}</style>
 
-        <motion.button
+        <motion.a
           initial = {{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 2 }}
-          type="button"
+          href="/agendar"
           aria-label="Agenda tu consultoría gratuita"
-          onClick={() => {
-            const ids = ['contact', 'contacto', 'contact-section', 'contacto-section', 'contacto-form']
-            for (const id of ids) {
-              const el = document.getElementById(id)
-              if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); return }
-            }
-            window.location.href = 'mailto:hola@trignia.com?subject=Consultoría%20gratuita'
-          }}
           className="mt-6 inline-flex items-center gap-3 text-white font-semibold text-sm md:text-base px-6 py-3 rounded-full shadow-lg transform transition duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-200 focus-visible:ring-offset-2 bg-linear-to-r from-emerald-600 to-emerald-700 btn-modern"
         >
           <span>Agenda tu consultoría GRATUITA</span>
           <svg className="w-4 h-4" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
             <path d="M6 4l8 6-8 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-        </motion.button>
+        </motion.a>
       </div>
       <div  className="max-w-6xl mx-auto px-6 pb-5">
         <h2 className="text-2xl font-bold subtitle-styles mb-12">Como funciona</h2>

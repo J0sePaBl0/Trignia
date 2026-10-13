@@ -2,15 +2,6 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 export default function WhySection() {
-  const handleCTAClick = () => {
-    const ids = ['contact', 'contacto', 'contact-section', 'contacto-section', 'contacto-form']
-    for (const id of ids) {
-      const el = document.getElementById(id)
-      if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); return }
-    }
-    window.location.href = 'mailto:hola@trignia.com?subject=Agendar%20reunión'
-  }
-
   return (
     <section id='whysection' className="md:py-16 py-8 "
     style={{
@@ -68,24 +59,16 @@ En Trignia analizamos tu operación, diseñamos flujos inteligentes y te acompa�
           .btn-modern:active { transform: translateY(-4px) scale(1.02) !important; }
         `}</style>
 
-        <button
-          type="button"
+        <a
+          href="/agendar"
           aria-label="Agenda tu consultoría gratuita"
-          onClick={() => {
-            const ids = ['contact', 'contacto', 'contact-section', 'contacto-section', 'contacto-form']
-            for (const id of ids) {
-              const el = document.getElementById(id)
-              if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); return }
-            }
-            window.location.href = 'mailto:hola@trignia.com?subject=Consultoría%20gratuita'
-          }}
           className="mt-6 inline-flex items-center gap-3 text-white font-semibold text-sm md:text-base px-6 py-3 rounded-full shadow-lg transform transition duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-200 focus-visible:ring-offset-2 btn-modern"
         >
           <span>Da el paso hacia el mundo moderno AHORA</span>
           <svg className="w-4 h-4" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
             <path d="M6 4l8 6-8 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-        </button>
+        </a>
           </motion.div>
         </div>
       </div>

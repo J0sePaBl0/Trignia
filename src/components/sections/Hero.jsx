@@ -59,20 +59,9 @@ export default function Hero({
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <button
-    type="button"
+            <a
+    href="/agendar"
     aria-label="Agenda tu reunión"
-    onClick={() => {
-      const ids = ['contact', 'contacto', 'contact-section', 'contacto-section', 'contacto-form']
-      for (const id of ids) {
-        const el = document.getElementById(id)
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-          return
-        }
-      }
-      window.location.href = 'mailto:hola@trignia.com?subject=Agendar%20reunión'
-    }}
     className="
       inline-flex items-center gap-3
       text-white font-semibold text-sm md:text-base
@@ -98,7 +87,7 @@ export default function Hero({
       strokeLinejoin="round"
     />
   </svg>
-</button>
+</a>
 
             <button
               onClick={onSecondaryClick}
